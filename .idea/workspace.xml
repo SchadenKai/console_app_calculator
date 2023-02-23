@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b6ad716-3779-43c1-8369-252afa1b5b1b" name="Changes" comment="final version 1">
+    <list default="true" id="5b6ad716-3779-43c1-8369-252afa1b5b1b" name="Changes" comment="final version 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -45,7 +45,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675412144675</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="final version 2">
+      <created>1676505402448</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676505402448</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,6 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="final version 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="final version 1" />
+    <MESSAGE value="final version 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version 2" />
   </component>
 </project>

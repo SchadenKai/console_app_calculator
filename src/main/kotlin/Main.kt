@@ -13,6 +13,22 @@ class Calculator {
     fun division(input1: Double, input2: Double): Double {
         return input1 / input2
     }
+    fun factorial(input: Int): Int {
+        if(input == 1) {
+            return input
+        } else {
+            return input * factorial(input-1)
+        }
+    }
+    fun exponent(base: Double, raised: Int):Double {
+        if(raised == 1) {
+            return base
+        }
+        if(raised == 0) {
+            return 1.00
+        }
+        return base * exponent(base, raised-1)
+    }
 }
 
 fun validateInput(input: List<String>): Boolean {
@@ -49,6 +65,16 @@ fun main() {
             println("Exiting Calculator...")
             exitProcess(0)
         }
+        if(input.size == 1 && input[0].contains(Regex("""([0-9]+)(!)"""))) {
+            val newInput = input[0].replace("!", "").toInt()
+            println(calculator.factorial(newInput))
+            continue
+        }
+        if(input.size == 1 && input[0].contains(Regex("""([0-9]+)(\^)([0-9]+)"""))) {
+            val newInput = input[0].split("^")
+            println(calculator.exponent(newInput[0].toDouble(), newInput[1].toInt()))
+            continue
+        }
 
         if(input.size == 3 && validateInput(input) && input.isNotEmpty()) {
             val firstInput = input[0].toDouble()
@@ -63,7 +89,7 @@ fun main() {
             }
         }
         else {
-            println("Please enter a valid input...")
+            println("Please enter a valid input.")
         }
     }
 }
