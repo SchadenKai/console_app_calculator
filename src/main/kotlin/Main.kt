@@ -1,3 +1,5 @@
+import java.lang.Math.pow
+import kotlin.math.pow
 import kotlin.system.exitProcess
 
 class Calculator {
@@ -75,7 +77,11 @@ fun main() {
             println(calculator.exponent(newInput[0].toDouble(), newInput[1].toInt()))
             continue
         }
-
+        if(input.size == 1 && input[0].contains(Regex("""(√)([0-9]+)"""))) {
+            val newInput = input[0].replace("√", "")
+            println(newInput.toDouble().pow(0.5))
+            continue
+        }
         if(input.size == 3 && validateInput(input) && input.isNotEmpty()) {
             val firstInput = input[0].toDouble()
             val operation = input[1]
