@@ -1,5 +1,5 @@
-import java.lang.Math.pow
 import kotlin.math.pow
+import kotlin.math.sqrt
 import kotlin.system.exitProcess
 
 class Calculator {
@@ -16,13 +16,13 @@ class Calculator {
         return input1 / input2
     }
     fun factorial(input: Int): Int {
-        if(input == 1) {
-            return input
+        return if(input == 1) {
+            input
         } else {
-            return input * factorial(input-1)
+            input * factorial(input-1)
         }
     }
-    fun exponent(base: Double, raised: Int):Double {
+    fun exponent(base: Double, raised: Int):Double {    
         if(raised == 1) {
             return base
         }
@@ -31,21 +31,19 @@ class Calculator {
         }
         return base * exponent(base, raised-1)
     }
+    fun percentage(base: Double): Double {
+        return base * 0.01
+    }
 }
 
 fun validateInput(input: List<String>): Boolean {
     val firstInput = input[0].toDoubleOrNull()
     val secondInput = input[2].toDoubleOrNull()
-    if(input[0].isBlank()) {
-        println("Don't enter a blank input...")
-        return false
-    }
-    if(firstInput == null || secondInput == null) {
-        println("Please enter a valid input...")
-        return false
-    }
-    if(!(input[1].contains(Regex("""[+,\-,*,/]+""")))) {
-        println("Please enter a valid input...")
+    if(input.isEmpty() ||
+        firstInput == null ||
+        secondInput == null ||
+        !(input[1].contains(Regex("""[+,\-,*,/]+"""))))
+    {
         return false
     }
     return true
@@ -67,20 +65,27 @@ fun main() {
             println("Exiting Calculator...")
             exitProcess(0)
         }
-        if(input.size == 1 && input[0].contains(Regex("""([0-9]+)(!)"""))) {
-            val newInput = input[0].replace("!", "").toInt()
-            println(calculator.factorial(newInput))
-            continue
-        }
-        if(input.size == 1 && input[0].contains(Regex("""([0-9]+)(\^)([0-9]+)"""))) {
-            val newInput = input[0].split("^")
-            println(calculator.exponent(newInput[0].toDouble(), newInput[1].toInt()))
-            continue
-        }
-        if(input.size == 1 && input[0].contains(Regex("""(√)([0-9]+)"""))) {
-            val newInput = input[0].replace("√", "")
-            println(newInput.toDouble().pow(0.5))
-            continue
+        if(input.size == 1) {
+            if(input[0].contains(Regex("""([0-9]+)(!)"""))) {
+                val newInput = input[0].removeSuffix("!").toInt()
+                println(calculator.factorial(newInput))
+                continue
+            }
+            if(input[0].contains(Regex("""([0-9]+).([0-9]*)(\^)([0-9]+)"""))) {
+                val newInput = input[0].split("^")
+                println(calculator.exponent(newInput[0].toDouble(), newInput[1].toInt()))
+                continue
+            }
+            if(input[0].contains(Regex("""(√)([0-9]+)"""))) {
+                val newInput = input[0].removePrefix("√")
+                println(sqrt(newInput.toDouble()))
+                continue
+            }
+            if(input[0].contains(Regex("""([0-9]+).([0-9]*)(%)"""))) {
+                val newInput = input[0].removeSuffix("%").toDouble()
+                println(calculator.percentage(newInput))
+                continue
+            }
         }
         if(input.size == 3 && validateInput(input) && input.isNotEmpty()) {
             val firstInput = input[0].toDouble()

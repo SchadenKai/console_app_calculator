@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b6ad716-3779-43c1-8369-252afa1b5b1b" name="Changes" comment="added factorial and exponent functions">
+    <list default="true" id="5b6ad716-3779-43c1-8369-252afa1b5b1b" name="Changes" comment="added square root and import module">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -59,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677119286157</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added square root and import module">
+      <created>1677124591718</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677124591718</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +99,7 @@
     <MESSAGE value="final version 1" />
     <MESSAGE value="final version 2" />
     <MESSAGE value="added factorial and exponent functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="added factorial and exponent functions" />
+    <MESSAGE value="added square root and import module" />
+    <option name="LAST_COMMIT_MESSAGE" value="added square root and import module" />
   </component>
 </project>
