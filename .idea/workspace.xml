@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b6ad716-3779-43c1-8369-252afa1b5b1b" name="Changes" comment="added square root and import module">
+    <list default="true" id="5b6ad716-3779-43c1-8369-252afa1b5b1b" name="Changes" comment="added percentage">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Calculator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Sort.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -9,6 +11,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677124591718</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added percentage">
+      <created>1677301462532</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677301462532</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +116,7 @@
     <MESSAGE value="final version 2" />
     <MESSAGE value="added factorial and exponent functions" />
     <MESSAGE value="added square root and import module" />
-    <option name="LAST_COMMIT_MESSAGE" value="added square root and import module" />
+    <MESSAGE value="added percentage" />
+    <option name="LAST_COMMIT_MESSAGE" value="added percentage" />
   </component>
 </project>
